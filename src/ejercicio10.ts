@@ -1,15 +1,13 @@
-let usuario: string = prompt("ingrese su usuario");
-let contracena: number = Number(prompt("ingrese su clave"));
+let usuario:string = prompt("ingrese su usuario");
+let contracena:string = (prompt("ingrese su clave");
 
-let nombre: string = "nicolas";
-let clave: Number = 1234;
-if (usuario === nombre) {
-  console.log("correcto");
+let nombre: string = "juan";
+let clave: string ="eureka"
+if (usuario === nombre && clave === contracena) {
+  console.log("bienvenido");
 } else {
-  console.log("usuario icorrecto");
+  console.log("clave incorrecta");
 }
-if (contracena === clave) {
-  console.log("correcto");
-} else {
-  console.log("clave icorrecta");
-}
+
+
+
