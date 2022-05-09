@@ -10,14 +10,14 @@ let total: number = 0;
 let positivos: number = 0;
 let porcentajePositivos: number = 0;
 
-let numeros1: number = Number(prompt("ingrese valores"));
+let numeros: number = Number(prompt("ingrese valores"));
 
-while (numeros1 !== 0){
-  if (numeros1 > 0){
+while (numeros !== 0){
+  if (numeros > 0){
      positivos=++;
   }
    total++;
-  numeros1 = Number(prompt("ingrese valores (0 para cortar)"));
+  numeros = Number(prompt("ingrese valores (0 para cortar)"));
 }
 if(total > 0){
     porcentajePositivos = positivos*100/total;
