@@ -12,17 +12,20 @@ let porcentajePositivos: number = 0;
 
 let numeros: number = Number(prompt("ingrese valores"));
 
-while (numeros !== 0){
-  if (numeros > 0){
-     positivos=++;
+while (numeros !== 0) {
+  if (numeros > 0) {
+    positivos++;
   }
-   total++;
+  total++;
   numeros = Number(prompt("ingrese valores (0 para cortar)"));
 }
-if(total > 0){
-    porcentajePositivos = positivos*100/total;
-    console.log("total positivos :" + positivos  + "es el " + porcentajePositivos + "% del total");
-  }
-
-
-
+if (total > 0) {
+  porcentajePositivos = (positivos * 100) / total;
+  console.log(
+    "total positivos " +
+      positivos +
+      " es el " +
+      porcentajePositivos +
+      "% del total"
+  );
+}
