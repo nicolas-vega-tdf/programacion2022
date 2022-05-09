@@ -6,17 +6,23 @@ Contar la cantidad de valores introducidos que sean mayores a 0 y
 el porcentaje de positivos respecto del total
 */
 
-let continuar: number = 1;
-let contador: number = 0;
-let suma: number = 0;
+let total: number = 0;
+let positivos: number = 0;
+let porcentajePositivos: number = 0;
 
-while (continuar !== 0) {
-  let numeros: number = Number(prompt("ingrese valores"));
-  if (numeros > 0) {
-    contador++;
-    suma = numeros + suma;
+let numeros1: number = Number(prompt("ingrese valores"));
+
+while (numeros1 !== 0){
+  if (numeros1 > 0){
+     positivos=++;
   }
-  continuar = Number(prompt("continuar?"));
+   total++;
+  numeros1 = Number(prompt("ingrese valores (0 para cortar)"));
 }
-console.log("total:" + suma);
-console.log("porcentaje:" + suma / contador);
+if(total > 0){
+    porcentajePositivos = positivos*100/total;
+    console.log("total positivos :" + positivos  + "es el " + porcentajePositivos + "% del total");
+  }
+
+
+
