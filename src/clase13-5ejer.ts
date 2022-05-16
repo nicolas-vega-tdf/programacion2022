@@ -17,13 +17,10 @@ function cantidadDeDivisores(dividendo: number): number {
 let dividendo: number = Number(prompt("ingrese el numero"));
 let contador: number = 0;
 
-if (contador === 0) {
-  console.log(
-    "el numero " +
-      dividendo +
-      " es divisible por " +
-      cantidadDeDivisores(dividendo)
-  );
+let divisores = cantidadDeDivisores(dividendo);
+
+if (contador === divisores) {
+  console.log("el numero " + dividendo + " es divisible por " + divisores);
 } else {
   console.log("el numero no es divisible");
 }
