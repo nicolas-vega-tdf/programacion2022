@@ -7,6 +7,7 @@ Re-utilice el método esMultiplo implementado para el ejercicio anterior
 */
 
 function cantidadDeDivisores(dividendo: number): number {
+  //esto es modularisacion (retorna un valor con parametros)
   for (let indice: number = 0; indice <= dividendo; indice++)
     if (dividendo % indice === 0) {
       contador = contador + 1;
@@ -24,3 +25,9 @@ if (contador === divisores) {
 } else {
   console.log("el numero no es divisible");
 }
+
+// if (divisores !== 0) {
+//   console.log("el numero " + dividendo + " es divisible por " + divisores);
+// } else {
+//   console.log("el numero no es divisible");
+// }
