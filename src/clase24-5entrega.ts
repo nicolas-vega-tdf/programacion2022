@@ -48,6 +48,6 @@ console.log(alumnos + " su promedio anual es: " + sumaNotas);
 //   alumnos[indice]=prompt("ingrese nombre de los alumos");
 // }
 
-// notasPrimertrimestre()
-// notassegundotrimestre()
-// notastercertrimestre()
+// notastrimestre()
+// notastrimestre()
+// notastrimestre()
