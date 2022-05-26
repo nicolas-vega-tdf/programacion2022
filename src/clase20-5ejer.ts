@@ -10,22 +10,22 @@ v1 =        1, 3, 7, 9, 9, 5
 v2 =        6, 9, 2, 5, 9, 4 vSuma =    7, 12, 9, 14, 18, 9
 */
 
-let arreglo1: number[] = new Array(6);
-let arreglo2: number[] = new Array(6);
-let arreglo3: number[] = new Array(6);
+let numero1: number[] = new Array(6);
+let numero2: number[] = new Array(6);
+let suma: number[] = new Array(6);
 
 for (let indice: number = 0; indice < 6; indice++) {
-  arreglo1[indice] = Number(prompt("ingrese primer numero"));
+  numero1[indice] = Number(prompt("ingrese primer numero"));
 }
 
 for (let indice: number = 0; indice < 6; indice++) {
-  arreglo2[indice] = Number(prompt("ingrese segundo numero"));
+  numero2[indice] = Number(prompt("ingrese segundo numero"));
 }
 
 for (let indice: number = 0; indice < 6; indice++) {
-  arreglo3[indice] = arreglo1[indice] + arreglo2[indice];
+  suma[indice] = numero1[indice] + numero2[indice];
 }
 
 for (let indice: number = 0; indice < 6; indice++) {
-  console.log(arreglo3[indice]);
+  console.log(suma[indice]);
 }
