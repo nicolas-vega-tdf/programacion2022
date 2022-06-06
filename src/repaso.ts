@@ -85,24 +85,44 @@ console.log(resultados);
 // • La presencia de un valor falso (false) en el
 // arreglo indica que la butaca está desocupada
 
-function cargarButacas(arreglo: boolean[], largo: number) {
-  for (let i: number = 0; i < largo; i++) {
-    arreglo[i] = Math.floor(Math.random() * 2);
-  }
+// function cargarButacas(arreglo: boolean[], largo: number) {
+//   for (let i: number = 0; i < largo; i++) {
+//     arreglo[i] = Math.floor(Math.random() * 2);
+//   }
+// }
+
+// function contarDesocupadas(arreglo: boolean[], largo: number): number {
+//   let desocupadas: number = 0;
+//   for (let i: number = 0; i < largo; i++) {
+//     if (arreglo[i] === 0) {
+//       desocupadas++;
+//     }
+//   }
+//   return desocupadas;
+// }
+
+// let nroButacas: number = Number(prompt("ingrese cantidad de butacas"));
+// let butacas: boolean = new Array(nroButacas);
+// cargarButacas(butacas, nroButacas);
+// let butacasDesocupadas = contarDesocupadas(butacas, nroButacas);
+// console.log("hay un total de " + butacasDesocupadas + " butacas desocupadas");
+
+function metodo1(arr, x, y) {
+  //intercambia los valores de x por y
+  let ax;
+  ax = arr[x];
+  arr[x] = arr[y];
+  arr[y] = ax;
 }
 
-function contarDesocupadas(arreglo: boolean[], largo: number): number {
-  let desocupadas: number = 0;
-  for (let i: number = 0; i < largo; i++) {
-    if (arreglo[i] === 0) {
-      desocupadas++;
-    }
+function metodo2(v, s) {
+  //intercambia los arreglos
+  let i, d, aux; //hasta que se encuenra aproximadamente en la mitad
+  i = 0;
+  d = s - 1;
+  while (i < d) {
+    metodo1(v, i, d);
+    i = i + 1;
+    d = d - 1;
   }
-  return desocupadas;
 }
-
-let nroButacas: number = Number(prompt("ingrese cantidad de butacas"));
-let butacas: boolean = new Array(nroButacas);
-cargarButacas(butacas, nroButacas);
-let butacasDesocupadas = contarDesocupadas(butacas, nroButacas);
-console.log("hay un total de " + butacasDesocupadas + " butacas desocupadas");
