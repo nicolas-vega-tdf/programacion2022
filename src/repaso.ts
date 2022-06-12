@@ -107,22 +107,42 @@ console.log(resultados);
 // let butacasDesocupadas = contarDesocupadas(butacas, nroButacas);
 // console.log("hay un total de " + butacasDesocupadas + " butacas desocupadas");
 
-function metodo1(arr, x, y) {
-  //intercambia los valores de x por y
-  let ax;
-  ax = arr[x];
-  arr[x] = arr[y];
-  arr[y] = ax;
-}
+// function metodo1(arreglo, 1, 2) {
+//   //intercambia los valores de x por y
+//   let ax;
+//   ax = arreglo[1];
+//   arreglo[1] = arreglo[2];
+//   arreglo[2] = ax;
+// }
 
-function metodo2(v, s) {
-  //intercambia los arreglos
-  let i, d, aux; //hasta que se encuenra aproximadamente en la mitad
-  i = 0;
-  d = s - 1;
-  while (i < d) {
-    metodo1(v, i, d);
-    i = i + 1;
-    d = d - 1;
-  }
+// function metodo2(v, s) {
+//                      //intercambia los arreglos
+// let i, d, aux;    //hasta que se encuenra aproximadamente en la mitad
+//   i = 0;              //El arreglo se navega con dos índices,denominados “i” y “d”,
+//   d = s - 1;          //los cualespermiten analizar el extremo izquierdo
+//   while (i < d) {     //y derecho al mismo tiempo
+//     metodo1(v, i, d);
+//     i = i + 1;
+//     d = d - 1;
+//   }
+// }
+
+/*
+let num1: number[] =[1, 2, 3, 4, 5, 6, 7, 8]; 
+
+for(let indice:number = num1.length-1;indice >= 0;indice--){
+  console.log(num1[indice]);
 }
+*/
+
+/*
+let num: number[] = new Array(3)
+
+num[0]=1
+num[1]=2
+num[2]=3
+
+for(let indice:number =num.length;indice > 0; indice--){
+  console.log(num[indice]);
+}
+*/
