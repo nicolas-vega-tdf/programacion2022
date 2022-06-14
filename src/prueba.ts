@@ -1,10 +1,10 @@
 /*
 Hacer un programa que simule la compra que hace un cliente en un
 supermercado. 
-El cliente va tener que ingresar por teclado la CANTIDAD de productos que va a llevar(listo)
-los PRODUCTOS que va a comprar(listo)
+El cliente va tener que ingresar por teclado la CANTIDAD de productos que va a llevar
+los PRODUCTOS que va a comprar
 el PRECIO UNITARIO de cada producto y la CANTIDAD
-A COMPRAR DE CADA producto.(listo)
+A COMPRAR DE CADA producto.
 Finalizada la compra, el programa va a mostrar por pantalla el
 detalle de la compra, productos, cantidad, precio unitario y precio
 total.
@@ -15,21 +15,21 @@ Dependiendo del monto comprado, el cliente participa de un sorteo:
 moto 0k
 • si compra mas de 1000 pero menos de 2000 participa un tv led
 */
-function cargarProductos(arrayproductos: string[]): void {
-  for (let i: number = 0; i < arrayproductos.length; i++) {
-    arrayproductos[i] = prompt("ingrese productos");
+function cargarProductos(productos: string[]): void {
+  for (let i: number = 0; i < productos.length; i++) {
+    productos[i] = prompt("ingrese productos");
   }
 }
 
-function precioProducto(arrayprecio: number[]) {
-  for (let i: number = 0; i < arrayprecio.length; i++) {
-    arrayprecio[i] = Number(prompt("ingrese el precio de " + productos[i]));
+function precioProducto(precio: number[]): void {
+  for (let i: number = 0; i < precio.length; i++) {
+    precio[i] = Number(prompt("ingrese el precio de " + productos[i]));
   }
 }
 
-function stockProducto(arraycantidad: number[]) {
-  for (let i: number = 0; i < arraycantidad.length; i++) {
-    arraycantidad[i] = Number(prompt("cantidad de " + productos[i]));
+function stockProducto(cantidad: number[]): void {
+  for (let i: number = 0; i < cantidad.length; i++) {
+    cantidad[i] = Number(prompt("cantidad de " + productos[i]));
   }
 }
 
@@ -42,32 +42,32 @@ function precioTotal(precio: number[], cantidad: number[]): number {
 }
 
 function resumenCompra() {
-  console.log("el resumen de su compra es: ");
-  for (let i: number = 0; i < cantidadProduc.length; i++) {
+  console.log("El resumen de su compra es: ");
+  for (let i: number = 0; i < cantidadProductos.length; i++) {
     console.log(
-      cantidadProduc[i] +
+      cantidadProductos[i] +
         " " +
         productos[i] +
         " a un precio de " +
         "$" +
-        precioP[i] +
+        precioPorUnidad[i] +
         " cada una " +
         "nos da una total de " +
         "$" +
-        precioP[i] * cantidadProduc[i]
+        precioPorUnidad[i] * cantidadProductos[i]
     );
   }
 }
 
-let cantidadProductos: number = Number(prompt("ingrese cantidad de productos"));
-let productos: string[] = new Array(cantidadProductos);
-let precioP: number[] = new Array(cantidadProductos);
-let cantidadProduc: number[] = new Array(cantidadProductos);
+let cantidad: number = Number(prompt("ingrese cantidad de productos"));
+let productos: string[] = new Array(cantidad);
+let precioPorUnidad: number[] = new Array(cantidad);
+let cantidadProductos: number[] = new Array(cantidad);
 
 cargarProductos(productos);
-precioProducto(precioP);
-stockProducto(cantidadProduc);
-let totalCompra: number = precioTotal(precioP, cantidadProduc);
+precioProducto(precioPorUnidad);
+stockProducto(cantidadProductos);
+let totalCompra: number = precioTotal(precioPorUnidad, cantidadProductos);
 resumenCompra();
 
 if (totalCompra < 1001) {
